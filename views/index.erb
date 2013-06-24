@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecommerce UCS Mobile</title>
+  <link rel="stylesheet" href="stylesheets/gumby.css">
+  <link rel="stylesheet" href="stylesheets/application.css">
+</head>
+<body>
+  <div class="row">
+    <div class="nine columns centered">
+      <script id="items-source" type="text/x-handlebars-template">
+        <h2>Consulta Itens:</h2>
+        <br/>
+        {{#items}}
+          <div class="valign row item">
+            <div>
+              <img src="{{image}}" width="145">
+            </div>
+            <div>
+              <p>{{description}}</p>
+              <h3>{{formatCurrency price}}</h3>
+            </div>
+            <div class="buy">
+              <div class="btn success medium">
+                <a href="" data-id="{{id}}" class="buy-item">Detalhes</a>
+              </div>
+            </div>
+          </div>
+        {{/items}}
+      </script>
+
+      <div id="items-block"></div>
+      <script id="item-source" type="text/x-handlebars-template">
+        <h2>{{description}}</h2>
+        <br/>
+        <div class="valign row item">
+          <div><img src="{{image}}"/></div>
+          <div>
+            <h3>{{formatCurrency price}}</h3>
+          </div>
+          <div>
+            <div class="btn primary medium">
+              <a href="" class="back">Voltar</a>
+            </div>
+          </div>
+        </div>
+
+
+      </script>
+
+      <div id="item-block"></div>
+    </div>
+  </div>
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/handlebars.js"></script>
+  <script src="javascripts/mediator.js"></script>
+  <script src="javascripts/module.js"></script>
+  <script src="javascripts/services/items.js"></script>
+  <script src="javascripts/views/index.js"></script>
+  <script src="javascripts/views/show.js"></script>
+  <script src="javascripts/app.js"></script>
+</body>
+</html>
