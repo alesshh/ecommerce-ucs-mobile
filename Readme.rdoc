@@ -1,0 +1,5 @@
+An educational app to explain MCV. Developed at Software Engineer discipline.
+
+Part of http://github.com/alesshh/ecommerce-ucs
+
+Demo at http://ecommerce-ucs-mobile.herokuapps.com
